@@ -1,7 +1,6 @@
 class Solution:
     def minimumRightShifts(self, nums: List[int]) -> int:
         n = len(nums)
-        ans = 0
         break_point = -1
 
         for i in range(1, n):
