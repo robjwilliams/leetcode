@@ -1,16 +1,14 @@
 class Solution:
     def reversePrefix(self, word: str, ch: str) -> str:
-        i = j = 0
         ans = list(word)
-        while i < len(word) and j < len(word):
-            if word[j] == ch:
-                while i < j:
-                    ans[i], ans[j] = ans[j], ans[i]
-                    j -= 1
-                    i += 1
-                return "".join(ans)           
-            else:
-                j += 1
-        
-        return "".join(ans)
-        
+        for i in range(0, len(word)):
+            if word[i] == ch:
+                left = 0
+                right = i
+                while left < right:
+                    ans[left], ans[right] = ans[right], ans[left]
+                    left += 1 
+                    right -= 1
+                return "".join(ans)
+            
+        return word        
