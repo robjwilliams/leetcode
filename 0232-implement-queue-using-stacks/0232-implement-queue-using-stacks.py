@@ -11,7 +11,6 @@ class MyQueue:
         aux_stack = []
 
         for i in range(1, len(self.stack)):
-            print(self.stack[i], aux_stack, 'pop')
             aux_stack.append(self.stack[i])
             
         res = self.stack[0]
@@ -26,7 +25,7 @@ class MyQueue:
         
 
     def empty(self) -> bool:
-        return len(self.stack) == 0
+        return not self.stack
 
 # Your MyQueue object will be instantiated and called as such:
 # obj = MyQueue()
