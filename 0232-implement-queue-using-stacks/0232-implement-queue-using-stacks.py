@@ -5,17 +5,12 @@ class MyQueue:
         
 
     def push(self, x: int) -> None:
-        self.stack.append(x)        
+        self.stack.append(x)
 
-    def pop(self) -> int:
-        aux_stack = []
-
-        for i in range(1, len(self.stack)):
-            aux_stack.append(self.stack[i])
-            
+    def pop(self) -> int:            
         res = self.stack[0]
         
-        self.stack = aux_stack
+        self.stack = self.stack[1:]
 
         return res
         
