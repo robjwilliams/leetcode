@@ -7,10 +7,15 @@ class MyQueue:
     def push(self, x: int) -> None:
         self.stack.append(x)
 
-    def pop(self) -> int:            
+    def pop(self) -> int:
+        aux_stack = []
+
+        for i in range(1, len(self.stack)):
+            aux_stack.append(self.stack[i])
+            
         res = self.stack[0]
         
-        self.stack = self.stack[1:]
+        self.stack = aux_stack
 
         return res
         
