@@ -4,7 +4,7 @@ class Solution:
         
         for i in range(len(s)):
             letter = s[i]
-            peek = stack[-1] if stack else -1
+            peek = stack[-1] if len(stack) else -1
             
             if peek == letter:
                 stack.pop()
