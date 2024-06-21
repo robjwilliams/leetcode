@@ -12,9 +12,6 @@ class Solution:
                 dict2[t[i]] = s[i]
             if dict1[s[i]] != t[i] or dict2[t[i]] != s[i]:
                 return False
-        # for i in range(n):
-        #     if dict1[s[i]] != t[i] or dict2[t[i]] != s[i]:
-        #         return False
         
         return True
         
