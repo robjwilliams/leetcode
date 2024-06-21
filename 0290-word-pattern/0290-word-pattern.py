@@ -10,10 +10,6 @@ class Solution:
             word = words[i]
             if not curr in dict1:
                 dict1[curr] = word
-
-        for i in range(0, len(pattern)):
-            curr = pattern[i]
-            word = words[i]
             if not word in dict2:
                 dict2[word] = curr
             if dict1[curr] != word or dict2[word] != curr:
