@@ -18,11 +18,6 @@ class Solution:
                 dict2[word] = curr
             if dict1[curr] != word or dict2[word] != curr:
                 return False
-            print(dict1[curr], word, '--',dict2[word], curr)
-        
-        print(dict1, dict2)
-            
-        
-        
+
         return True
         
