@@ -13,7 +13,6 @@ class Solution:
                 curr -= 1
             seen[s[right]] = right
             ans = max(ans, curr)
-            # print(seen, curr)
 
         return ans
             
